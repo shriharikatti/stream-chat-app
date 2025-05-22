@@ -2,11 +2,11 @@
       "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-          "@/components/*": ["src/components/*"],
-          "@/lib/utils": ["src/lib/utils"]
+          "@/components/*": ["components/*"],
+          "@/lib/utils": ["lib/utils"]
         },
         "jsx": "react-jsx"
       },
-      "include": ["src"]
+      "include": ["frontend/src"]
     }
     
