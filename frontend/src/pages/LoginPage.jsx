@@ -35,7 +35,7 @@ function LoginPage() {
         </form>
 
         <p className='mt-6 text-center text-gray-400'>
-          Don't have an account? <Link to='/singup' className='text-blue-400 hover:underline'>Sign Up</Link>
+          Don't have an account? <Link to='/signup' className='text-blue-400 hover:underline'>Sign Up</Link>
         </p>
       </div>
     </div>
