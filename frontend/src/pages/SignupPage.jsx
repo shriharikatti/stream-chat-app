@@ -1,9 +1,14 @@
-import React from 'react';
+    import React, { useState } from 'react';
     import { Link } from 'react-router-dom';
     import { Button } from '../components/ui/button';
     import { Input } from '../components/ui/input';
 
     function SignupPage() {
+      const [username, setUsername] = useState('');
+      const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+      const [confirmPassword, setConfirmpassword] = useState('');
+
       return (
         <div className="flex flex-col items-center justify-center min-h-[60vh] p-4">
           <div className="bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-md">
@@ -16,6 +21,8 @@ import React from 'react';
                   id="username"
                   placeholder="Your unique username"
                   className="w-full bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                  value ={username}
+                  onChange ={(e)=> setUsername(e.target.value)}                
                 />
               </div>
               <div>
@@ -25,6 +32,8 @@ import React from 'react';
                   id="email"
                   placeholder="you@example.com"
                   className="w-full bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                  value = {email}
+                  onChange = {(e)=> setEmail(e.target.value)}
                 />
               </div>
               <div>
@@ -34,6 +43,8 @@ import React from 'react';
                   id="password"
                   placeholder="••••••••"
                   className="w-full bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                  value={password}
+                  onChange={(e)=> setPassword(e.target.value)}
                 />
               </div>
               <div>
@@ -43,6 +54,8 @@ import React from 'react';
                   id="confirm-password"
                   placeholder="••••••••"
                   className="w-full bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                  value={confirmPassword}
+                  onChange={(e)=> setConfirmpassword(e.target.value)}
                 />
               </div>
               <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md transition-colors duration-200">
